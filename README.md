@@ -6,6 +6,7 @@ This project allows users to create custom RGB color combinations using a joysti
 
 ### Features & Controls:
 An indicator LED shows which component is currently being adjusted:
+
 **Red LED:** Adjusting red component
 
 
