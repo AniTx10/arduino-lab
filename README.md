@@ -23,7 +23,9 @@ An indicator LED shows which component is currently being adjusted:
 **Joystick Left + Click:**  Switch to the previous color component (Blue → Green → Red).
 
 Value Adjustment (0–255 range):
+
 **Joystick Up:** increases value of the component (0-255)
+
 **Joystick Down:** decreases value of the component (0-255)
 
 
