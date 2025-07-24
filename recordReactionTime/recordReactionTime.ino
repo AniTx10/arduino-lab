@@ -26,6 +26,8 @@ void setup() {
   pinMode(buttonPin, INPUT_PULLUP);
   randomSeed(analogRead(A0));
   lcd.setCursor(0,0);
+  lcd.print("Time: N/A");
+  lcd.setCursor(0,1);
   lcd.print("Best: N/A");
 
 }
@@ -41,14 +43,27 @@ void loop() {
   digitalWrite(buzzPin, LOW);
   buttonPressed = millis();
   score = buttonPressed - buzzStart;
-  if(score < highScore) setHighScore();
+  setScores();
   
 }
 
-void setHighScore(){
-  highScore = score;
+void setScores(){
+  if(score == 0){
+    lcd.clear();
+    lcd.setCursor(0,0);
+    lcd.print("Don't cheat bud");
+    return;
+  }
+  
   lcd.clear();
   lcd.setCursor(0,0);
+  lcd.print("Time: ");
+  lcd.print(score);
+  lcd.print("ms");
+
+  if(score < highScore) highScore = score;  
+
+  lcd.setCursor(0,1);
   lcd.print("Best: ");
   lcd.print(highScore);
   lcd.print("ms");
