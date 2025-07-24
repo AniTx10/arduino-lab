@@ -10,8 +10,6 @@ const int d7 = 12;
 const int buzzPin = 3;
 const int buttonPin = 4;
 
-int buttonState;
-
 int dt;
 int buzzStart;
 int buttonPressed;
